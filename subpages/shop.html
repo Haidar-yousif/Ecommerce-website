@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fakhredine Codes Ecommerce Tutorial</title>
+        <!-- font-awesome cdn -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <!-- favicon -->
+        <link rel="icon" href="/images/favicon.ico" />
+        <!-- css style -->
+        <link rel="stylesheet" href="/style/style.css" />
+        <link rel="stylesheet" href="/style/responsive.css" />
+    </head>
+<body>
+    <!-- Header -->
+        <header id="Header">
+            <a href=""><img src="/images/logo (1).png" class="logo" alt=""></a>
+            <nav>
+                <ul id="navbar">
+                    <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/subpages/shop.html" class="active">Shop</a></li>
+                    <li><a href="/subpages/blog.html">Blog</a></li>
+                    <li><a href="/subpages/about.html">About</a></li>
+                    <li><a href="/subpages/contact.html">Contact</a></li>
+                    <li class="lg-bag"><a href="/subpages/cart.html"><i class="head-cart fa-solid fa-bag-shopping"></i></a></li>
+             
+                </ul>
+            </nav>
+            <div id="mobile">
+                <a href="/subpages/cart.html"><i class="head-cart fa-solid fa-bag-shopping"></i></a>
+             <i class="fa-solid fa-bars" id="bar"></i>
+            </div>
+        </header>
+              <!--   Hero Section   -->
+          <section  class="section-p1 about-herro">
+            <div class="text">
+                <h4>#StayAtHome</h4>
+                <p>Shop more with Exciting Offers on Curated Brand !</p>  
+            </div>
+            </section>
+    <!-- Selected Product -->
+    <section id="selected">
+    
+    </section>
+    <!-- Products -->
+    <section id="product1" class="section-p1">
+       
+        <div class="pro-container">
+       
+        </div>
+     </section>
+    <!-- NewsLetter -->
+    <section id="newletter" class="section-p1">
+        <div class="text">
+            <h4>Sign Up For NewsLetter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>  
+        </div>
+            <form action=""class="form">
+                <input type="text" placeholder="your email address">
+                <button class="normal" type="submit">Sign Up</button>
+            </form>
+        </section>
+    <!-- Footer Deja wajd hit fih bzaf tl content -->
+    <footer class="section-p1">
+        <div class="col">
+          <img src="./img/logo.png" alt="logo" class="logo" />
+          <h4>Contact</h4>
+          <p>
+            <strong>Address:</strong>B2/238 Cyber Police Station Road, Rohini
+            Sector 17, New Delhi
+          </p>
+          <p><strong>Phone:</strong>(+961) 70 030 678 / (+961) 71 076 301</p>
+          <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
+          <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+          <a href="https://www.facebook.com/profile.php?id=100073656351945"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>    
+          <a href="https://www.linkedin.com/in/haidar-yousif-815018231/"> <i class="fa-brands fa-linkedin" aria-hidden="true"></i>            </a> 
+            </div>
+          </div>
+        </div>
+  
+        <div class="col">
+          <h4>About</h4>
+          <a href="./subpages/about.html">About Us</a>
+          <a href="./subpages/blog.html">Delivery Information</a>
+          <a href="./subpages/blog.html">Privacy Poilcy</a>
+          <a href="./subpages/blog.html">Terms &amp; Condition</a>
+          <a href="./subpages/contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+          <h4>My Account</h4>
+          <a href="#newsLetter">Sign In</a>
+          <a href="./subpages/cart.html">View Cart</a>
+          <a href="./subpages/shop.html">My WishList</a>
+          <a href="./subpages/sproduct.html">Track My Order</a>
+          <a href="./subpages/contact.html">Help</a>
+        </div>
+  
+        <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+            <img src="./img/pay/app.jpg" alt="app" />
+            <img src="./img/pay/play.jpg" alt="play" />
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="./img/pay/pay.png" alt="pay" />
+        </div>
+        <div class="copyright">
+          <p>©2023 Fakhredine Codes. All Rights Reseverd.</p>
+        </div>
+      </footer>
+            
+     <script>
+            document.querySelector("#bar").addEventListener("click",()=>{
+                document.querySelector("#navbar").classList.toggle("show")
+            })
+            document.querySelector("#close").addEventListener("click",()=>{
+                document.querySelector("#navbar").classList.toggle("show")
+            })
+        
+            function Product(src,kind,price){
+    
+    this.src=src;
+    this.kind=kind;
+    this.price=price;
+}
+const prodList=[
+    new Product("/images/products (1)/f1.jpg","T-Shirt",30),
+    new Product("/images/products (1)/f2.jpg","T-Shirt",50),
+    new Product("/images/products (1)/f3.jpg","T-Shirt",54),
+    new Product("/images/products (1)/f4.jpg","T-Shirt",69),
+    new Product("/images/products (1)/f5.jpg","T-Shirt",23),
+    new Product("/images/products (1)/f6.jpg","Chemise",44),
+    new Product("/images/products (1)/f7.jpg","Pantalon",33),
+    new Product("/images/products (1)/f8.jpg","T-Shirt-Women",57)
+]
+
+function FillProducts(withevent){
+    let prodcontainer=document.querySelector(".pro-container");
+    for(let i=0;i<prodList.length;i++){
+        let div=document.createElement("div")
+        div.classList.add("pro");
+        div.innerHTML=`
+        <img src="${prodList[i].src}" alt="product${i+1}">
+            <div class="des">
+                <span>Cara</span>
+                <h5>${prodList[i].kind}</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>$${prodList[i].price}</h4>
+
+            </div>
+            <a href="subpages/cart.html" class="cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+        `;
+        div.addEventListener("click",()=>{
+            let selected=document.querySelector("#selected");
+         selected.style.display="flex";
+            let divimg=document.createElement("div")
+            divimg.classList.add("img")
+            divimg.innerHTML=`
+           <img src="${prodList[i].src}" alt=""> 
+            `;
+            let divcontent=document.createElement("div");
+            divcontent.id="content";
+        
+            if(localStorage.length!=0 && JSON.parse(localStorage.Product).includes(i)){
+                divcontent.innerHTML=`
+             <h3 id="kind">${prodList[i].kind}</h3>
+            <h4 id="price">$${prodList[i].price}</h4>
+            <label for="size">select size</label>
+
+<select id="size">
+<option value="small" selected>small</option>
+<option value="medium">medium</option>
+<option value="large">large</option>
+</select>
+<input id="count"value=1 type="number" min="1" name="count" placeholder="number">
+<h5 style="font-size:20px;color:brown;">Product already exist , <a href="/subpages/cart.html">see your cart ...</a></h5>
+<button onclick="Save(${i})">Add to cart</button>
+<h3>Product Details</h3>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto ipsam perspiciatis, magni expedita maxime, itaque deleniti illum, dolore rem reiciendis.</p>
+            `;
+            }
+            else {
+            divcontent.innerHTML=`
+             <h3 id="kind">${prodList[i].kind}</h3>
+            <h4 id="price">$${prodList[i].price}</h4>
+            <label for="size">select size</label>
+
+<select id="size">
+<option value="small" selected>small</option>
+<option value="medium">medium</option>
+<option value="large">large</option>
+</select>
+<input id="count"value=1 type="number" min="1" name="count" placeholder="number">
+<button onclick="Save(${i})">Add to cart</button>
+<h3>Product Details</h3>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto ipsam perspiciatis, magni expedita maxime, itaque deleniti illum, dolore rem reiciendis.</p>
+            `;
+            }
+        selected.innerHTML="";
+            selected.appendChild(divimg);
+            selected.appendChild(divcontent);
+        })
+        prodcontainer.appendChild(div)
+    }
+}
+
+function Save(prodIndex){
+    let prodarray=new Array()
+    if(localStorage.length==0)localStorage.Product=JSON.stringify(new Array());
+else prodarray=JSON.parse(localStorage.Product)
+    
+    let size=document.querySelector("#size").value;
+    let count=document.querySelector("#count").value;
+   localStorage.setItem(prodIndex,JSON.stringify(Object({"count":count,"size":size,"kind":prodList[prodIndex].kind,"price":prodList[prodIndex].price})))
+if(!prodarray.includes(prodIndex))
+   prodarray.push(prodIndex)
+console.log(prodarray)
+localStorage.Product=JSON.stringify(prodarray)
+}
+FillProducts()
+        </script>
+</body>
+</html>
